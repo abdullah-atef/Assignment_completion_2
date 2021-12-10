@@ -16,18 +16,10 @@ public class SampleTestingPageObject {
     public SampleTestingPageObject() throws MalformedURLException {
     }
 
-//    public SampleTestingPageObject(WebDriver driver) throws MalformedURLException {
-//
-//        this.driver = driver;
-//
-//    }
 
     public HomePage gethomePageObject() {
         return homePage;
     }
 
 
-//    public WebDriver getDriver(){
-//        return driver;
-//    }
 }
