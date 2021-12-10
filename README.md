@@ -8,9 +8,6 @@ Following classes used for Page Object Model Cases:
 
 And SampleTestingPageObject is working as Page Object Manager
 
-I used Properties files so that I can pass parameters value through the whole Classes which is PropertyManager
-ChromeDriver is enclose in resources package
 
-setup docker on your local machine
-install selenoid from below link:
+Please setup docker on your local machine and install selenoid from below link:
 https://github.com/aerokube/selenoid
