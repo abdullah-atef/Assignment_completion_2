@@ -1,2 +1,0 @@
-# abdullah-nagarro
-assignment
