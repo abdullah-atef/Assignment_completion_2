@@ -1,6 +1,8 @@
 package utilities;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -9,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 import java.util.Properties;
 public class PropertyManager {
     private static PropertyManager instance;
@@ -56,6 +59,29 @@ public class PropertyManager {
 
     public String getPassword () {
         return Password;
+    }
+
+    public void closeDriver(WebDriver driver) {
+        driver.close();
+    }
+
+    public boolean switchToFrameByClassName(WebDriver driver, String val) {
+        boolean bflg = false;
+        try {
+            List<WebElement> we = driver.findElements(By.tagName("iframe"));
+            int ln = we.size();
+
+            for (int i = 0; i < ln; i++) {
+                if (we.get(i).getAttribute("class").equals(val)) {
+                    driver.switchTo().frame(i);
+                    bflg = true;
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return bflg;
     }
 
 
