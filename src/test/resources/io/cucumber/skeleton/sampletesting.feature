@@ -2,8 +2,10 @@
   @SeleniumAssignmentCompletion
   Feature: Selenium Test Assignments Features
 
-  Background: Login Page
-    Given I am on home page of application "https://jqueryui.com/"
+    Background: : Landing Page
+      Given User in home page "https://jqueryui.com/"
+
+
 
   @DragAndDrop
   Scenario: Test Drag and Drop Scenario
