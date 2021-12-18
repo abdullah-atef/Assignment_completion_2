@@ -2,34 +2,34 @@
   @SeleniumAssignmentCompletion
   Feature: Selenium Test Assignments Features
 
-    Background: : Landing Page
+    Background: Landing Page
       Given User in home page "https://jqueryui.com/"
 
 
 
   @DragAndDrop
-  Scenario: Test Drag and Drop Scenario
-    When I select Droppable option from left menu under interactions
-    And Drag Drag me to my target component to Drop here component
-    Then I should be able to able to drag and drop
+  Scenario: Test Drag and Drop
+    When User selects Droppable option under interactions
+    And Drag me to my target component to Drop here component
+    Then User should be able to do drag and drop
 
   @MultipleSelect
   Scenario Outline: Test Multiple Select Options
-    When I select Selectable option from left menu under interactions
-    And Select items "<Items>" from options
-    Then I should be able to verify that the multiple select option is allowed
+    When User selects Selectable option from left menu under interactions
+    And User selects items "<Items>" from options
+    Then User should be able to verify that the multiple select option is allowed
 
     Examples:
       | Items                |
-      | Item 1;Item 3;Item 5 |
+      | Item 1;Item 3;Item 7 |
 
 
   @ControlGroup
   Scenario Outline: Test Control Group
-    When I select Controlgroup option from left menu under interactions
-    And enter booking details for Horizontal orientation like Vehicle Option "<VehicleOption1>" Type "<VehicleType1>" number "<Number1>"
-    And enter booking details for Vertical orintation like Vehicle Option "<VehicleOption2>" Type "<VehicleType2>" number "<Number2>"
-    And opt for Insurance for either case
+    When User selects Controlgroup option from left menu under interactions
+    And enter booking details for Horizontal orientation: Vehicle Option "<VehicleOption1>" Type "<VehicleType1>" number "<Number1>"
+    And enter booking details for Vertical orientation: Vehicle Option "<VehicleOption2>" Type "<VehicleType2>" number "<Number2>"
+    And select Insurance for both cases
     And click on Book Now Button
     Then Booking should be Successful
 

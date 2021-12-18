@@ -31,19 +31,19 @@ public class Selectable {
     }
 
     @Given("^I am on home page of application \"([^\"]*)\"$")
-    public void i_am_on_home_page_of_application() throws MalformedURLException {
+    public void user_in_home_page_of_application() throws MalformedURLException {
         driver = utilities.PropertyManager.getInstance().getdriver();
     }
 
 
-    @When("^I select Selectable option from left menu under interactions$")
-    public void i_select_Selectable_option_from_left_menu_under_interactions() throws Throwable {
+    @When("^User selects Selectable option from left menu under interactions$")
+    public void user_selects_Selectable_option_from_left_menu_under_interactions() throws Throwable {
         driver = utilities.PropertyManager.getInstance().getdriver();
         homePage = new HomePage(driver);
         homePage.clickOnSelectableLink();
     }
 
-    @When("^Select items \"([^\"]*)\" from options$")
+    @When("^User selects items \"([^\"]*)\" from options$")
     public void select_items_from_options(String arg1) {
         selectablePage = new SelectablePage(driver);
         String[] arr = arg1.split(";");
@@ -55,8 +55,8 @@ public class Selectable {
         }
     }
 
-    @Then("^I should be able to verify that the multiple select option is allowed$")
-    public void i_should_be_able_to_verify_that_the_multiple_select_option_is_allowed() {
+    @Then("^User should be able to verify that the multiple select option is allowed$")
+    public void user_should_be_able_to_verify_that_the_multiple_select_option_is_allowed() {
 
     }
 

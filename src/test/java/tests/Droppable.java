@@ -26,8 +26,8 @@ public class Droppable {
         }
     }
 
-    @When("^I select Droppable option from left menu under interactions$")
-    public void i_select_Droppable_option_from_left_menu_under_interactions() throws Throwable {
+    @When("^User selects Droppable option under interactions$")
+    public void select_Droppable_option_under_interactions() throws Throwable {
         WebDriver driver = PropertyManager.getInstance().getdriver();
         homePage = new HomePage(driver);
         droppablePage = new DroppablePage(driver);
@@ -35,7 +35,7 @@ public class Droppable {
 
     }
 
-    @When("^Drag Drag me to my target component to Drop here component$")
+    @When("^Drag me to my target component to Drop here component$")
     public void drag_Drag_me_to_my_target_component_to_Drop_here_component() throws Throwable {
         WebDriver driver = PropertyManager.getInstance().getdriver();
 
@@ -47,7 +47,7 @@ public class Droppable {
         }
     }
 
-    @Then("^I should be able to able to drag and drop$")
+    @Then("^User should be able to do drag and drop$")
     public void i_should_be_able_to_able_to_drag_and_drop() {
 
         Assert.assertEquals(droppablePage.isDropped(), true);

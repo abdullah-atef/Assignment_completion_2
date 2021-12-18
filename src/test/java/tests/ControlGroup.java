@@ -26,15 +26,15 @@ public class ControlGroup {
         }
     }
 
-    @When("^I select Controlgroup option from left menu under interactions$")
-    public void i_select_Controlgroup_option_from_left_menu_under_interactions() throws Throwable {
+    @When("^User selects Controlgroup option from left menu under interactions$")
+    public void user_select_Controlgroup_option_from_left_menu_under_interactions() throws Throwable {
         driver = utilities.PropertyManager.getInstance().getdriver();
         homePage = new HomePage(driver);
         homePage.clickOnControlGroup();
     }
 
-    @When("^enter booking details for Horizontal orientation like Vehicle Option \"([^\"]*)\" Type \"([^\"]*)\" number \"([^\"]*)\"$")
-    public void enter_booking_details_for_Horizontal_orientation_like_Vehicle_Option_Type_number(String arg1,
+    @When("^enter booking details for Horizontal orientation: Vehicle Option \"([^\"]*)\" Type \"([^\"]*)\" number \"([^\"]*)\"$")
+    public void enter_booking_details_for_Horizontal_orientation_Vehicle_Option_Type_number(String arg1,
                                                                                                  String arg2, String arg3) {
         controlGroupPage = new ControlGroupPage(driver);
         try {
@@ -46,8 +46,8 @@ public class ControlGroup {
         }
     }
 
-    @When("^enter booking details for Vertical orintation like Vehicle Option \"([^\"]*)\" Type \"([^\"]*)\" number \"([^\"]*)\"$")
-    public void enter_booking_details_for_Vertical_orintation_like_Vehicle_Option_Type_number(String arg1, String arg2,
+    @When("^enter booking details for Vertical orientation: Vehicle Option \"([^\"]*)\" Type \"([^\"]*)\" number \"([^\"]*)\"$")
+    public void enter_booking_details_for_Vertical_orientation_Vehicle_Option_Type_number(String arg1, String arg2,
                                                                                               String arg3) {
         try {
             controlGroupPage.selectRentalCar2(arg1);
@@ -58,8 +58,8 @@ public class ControlGroup {
         }
     }
 
-    @When("^opt for Insurance for either case$")
-    public void opt_for_Insurance_for_either_case() {
+    @When("^select Insurance for both cases$")
+    public void select_Insurance_for_both_case() {
         try {
             controlGroupPage.insuranceCheckBox();
             controlGroupPage.insuranceCheckBox2();
