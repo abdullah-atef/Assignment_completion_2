@@ -3,7 +3,7 @@
   Feature: Selenium Test Assignments Features
 
     Background: Landing Page
-      Given User in home page "https://jqueryui.com/"
+      Given User in homepage
 
 
 

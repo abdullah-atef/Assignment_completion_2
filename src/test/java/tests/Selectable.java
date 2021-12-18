@@ -30,7 +30,7 @@ public class Selectable {
         }
     }
 
-    @Given("^I am on home page of application \"([^\"]*)\"$")
+    @Given("^User in homepage$")
     public void user_in_home_page_of_application() throws MalformedURLException {
         driver = utilities.PropertyManager.getInstance().getdriver();
     }
